@@ -5,13 +5,16 @@
     "babel-preset-react": "^6.24.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "ws": "3.3.2"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "holderjs": "^2.9.6",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
     "webpack-notifier": "^1.8.0"
   }
 }

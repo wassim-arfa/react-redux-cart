@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Navbar from './components/Navbar';
 
 class App extends React.Component {
     constructor() {
@@ -10,7 +11,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                Hello World
+                <Navbar />
             </div>
         )
     }
