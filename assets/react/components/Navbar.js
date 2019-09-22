@@ -1,8 +1,8 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Home from './pages/Home';
-import Product from './pages/Product';
 import Cart from './pages/Cart';
+import Product from './pages/Product';
 
 export default function Navbar() {
     return (
@@ -25,7 +25,6 @@ export default function Navbar() {
                             <Link className="nav-item nav-link active" to="/react/public/index.php/">Home
                                 <span className="sr-only">(current)</span>
                             </Link>
-                            <Link className="nav-item nav-link" to="/product/">Product</Link>
                             <Link className="nav-item nav-link" to="/cart/">Cart</Link>
                         </div>
                     </div>
@@ -33,8 +32,8 @@ export default function Navbar() {
 
                 <Switch>
                     <Route exact path='/react/public/index.php/' component={Home}/>
-                    <Route path='/product/' component={Product}/>
                     <Route path='/cart/' component={Cart}/>
+                    <Route path='/react/public/index.php/:id/' component={Product}/>
                 </Switch>
 
             </div>

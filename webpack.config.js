@@ -20,12 +20,12 @@ Encore
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
-    // .configureBabel(function(babelConfig) {
+    .configureBabel(function(babelConfig) {
 
-    //     //This is needed.
+        //This is needed.
     
-    //     babelConfig.plugins = ["transform-object-rest-spread","transform-class-properties"]
-    // })
+        babelConfig.plugins = ["transform-object-rest-spread","transform-class-properties"]
+    })
     .enableReactPreset();
 
 ;
