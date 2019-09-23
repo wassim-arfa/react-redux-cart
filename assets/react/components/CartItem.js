@@ -1,19 +1,24 @@
 import React from 'react'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-export default function Product(props) {
+
+export default function CartItem(props) {
+
     const {product} = props
     return (
-        <div className="card mr-3 mb-3 box-shadow" style={{width: '18rem'}}>
+ 
+        <div className="card mr-3 mb-3 box-shadow" style={{width: '10rem'}}>
             <img className="card-img-top" alt={product.title}
-                 style={{height: 180, width: '100%', display: 'block'}}
+                 style={{height: 100, width: '100%', display: 'block'}}
                  src={product.picture}
                  data-holder-rendered="true"/>
 
             <div className="card-body">
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text">Price : {product.price} $</p>
-                <Link to={"/react/public/index.php/" + product.id} className="btn btn-primary">Details</Link>
+                <p className="card-text">Quantity : x</p>
+                <p className="card-text">Total price : x</p>
+                <button className="btn btn-danger">Delete</button>
             </div>
         </div>
+
     )
 }
