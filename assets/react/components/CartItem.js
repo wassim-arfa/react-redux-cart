@@ -14,8 +14,8 @@ export default function CartItem(props) {
             <div className="card-body">
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text">Price : {product.price} $</p>
-                <p className="card-text">Quantity : x</p>
-                <p className="card-text">Total price : x</p>
+                <p className="card-text">Quantity : {props.quantity}</p>
+                <p className="card-text">Total price : {props.quantity * product.price}</p>
                 <button className="btn btn-danger">Delete</button>
             </div>
         </div>

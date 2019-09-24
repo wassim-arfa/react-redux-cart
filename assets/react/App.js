@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './components/Navbar';
+import store from './store/store';
+import {Provider} from 'react-redux';
 
 class App extends React.Component {
     constructor() {
@@ -10,9 +12,9 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+                <Provider store={store}>
                 <Navbar />
-            </div>
+                </Provider>
         )
     }
 }
