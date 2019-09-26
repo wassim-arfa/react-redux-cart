@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-
+import cartReducer from "./reducers";
 
 const initialState = {
     products: [
@@ -13,26 +13,23 @@ const initialState = {
             product: {
             id: "1", 
             picture: "https://besthqwallpapers.com/Uploads/17-3-2018/44515/thumb2-turkish-angora-breed-of-domestic-cat-white-short-haired-cat-angora-cat-pets.jpg", 
-            title : "White Cat", 
-            price: "100", 
-            body: "Adipisicing culpa fugiat amet proident nulla Lorem esse exercitation. Fugiat sit officia laboris dolor. Nulla aute voluptate duis excepteur tempor dolore labore ad dolore magna duis proident ut amet. Nulla dolor velit veniam veniam consectetur ut Lorem id ex. Do duis veniam et labore fugiat culpa do qui aute adipisicing tempor laborum esse. Deserunt elit excepteur eiusmod officia commodo anim laborum excepteur."
+            title : "White Cat", price: "100", body: "Adipisicing culpa fugiat amet proident nulla Lorem esse exercitation. Fugiat sit officia laboris dolor. Nulla aute voluptate duis excepteur tempor dolore labore ad dolore magna duis proident ut amet. Nulla dolor velit veniam veniam consectetur ut Lorem id ex. Do duis veniam et labore fugiat culpa do qui aute adipisicing tempor laborum esse. Deserunt elit excepteur eiusmod officia commodo anim laborum excepteur."
         },
         quantity: 2
     },
 
     {
-        product: {id: "2", picture: "https://www.freegreatpicture.com/files/157/1562-cute-little-cat.jpg", title : "Little Cat", price: "250", body: "Dolor occaecat proident voluptate ipsum sint dolore mollit in. Veniam quis incididunt ullamco nisi. Deserunt aliquip quis sint culpa. Sit dolor nulla enim sunt deserunt sit. Tempor enim magna proident mollit pariatur do et Lorem ullamco Lorem eiusmod aute reprehenderit est."},
+        product: {
+            id: "2", 
+            picture: "https://www.freegreatpicture.com/files/157/1562-cute-little-cat.jpg", 
+            title : "Little Cat", price: "250", body: "Dolor occaecat proident voluptate ipsum sint dolore mollit in. Veniam quis incididunt ullamco nisi. Deserunt aliquip quis sint culpa. Sit dolor nulla enim sunt deserunt sit. Tempor enim magna proident mollit pariatur do et Lorem ullamco Lorem eiusmod aute reprehenderit est."
+        },
         quantity: 5
     }
     ]
 }
 
-function reducers(state)
-{
-    return state;
-}
-
-const store = createStore(reducers, initialState);
+const store = createStore(cartReducer, initialState);
 
 export default store;
 
