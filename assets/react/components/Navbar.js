@@ -50,7 +50,7 @@ class Navbar extends React.Component {
 const mapStateToProps = (state) => {
     // console.log(state.cart)
     return {
-        quantity : state.cart.reduce((quantity, item) => quantity + item.quantity, 0),
+        quantity : state.cart.reduce((quantity, item) => quantity + parseInt(item.quantity), 0),
         // total: state.cart.reduce((total, item) => total + item.quantity * item.product.price, 0),
     };
 }

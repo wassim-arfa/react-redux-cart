@@ -22,7 +22,7 @@ class Product extends React.Component {
     handleQuantity = (event) => {
         const value = event.target.value;
 
-        if (value < 0) 
+        if (value < 1) 
             return;
         
         this.setState({quantity: value})
